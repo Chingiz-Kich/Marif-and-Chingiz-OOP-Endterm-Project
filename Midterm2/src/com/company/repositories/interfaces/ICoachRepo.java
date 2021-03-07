@@ -7,7 +7,7 @@ import java.util.List;
 public interface ICoachRepo {
     List<Coach> getAllCoaches();        // в главнои меню
     Coach getInfoCoach(String surname);     // в главном меню (инфа о коаче)
-    int getLicense(String surname);
+    int getLicense(String surname);            // в трансферах при назначении гл. тренера
     boolean setLicense(String surname, int license);    // в главном меню
     String getTeam(String surname);     // в главном меню
     boolean setTeam(String surname, String team);       // в трансферах при назначении гл. тренера
