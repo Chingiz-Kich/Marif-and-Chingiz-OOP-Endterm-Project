@@ -37,9 +37,9 @@ public class Application {
             System.out.println("0. Exit");
 
             System.out.print("Enter: ");
-            int option = this.in.nextInt();
 
             try {
+                int option = this.in.nextInt();
                 if (option == 1) {
                     while (true) {
                         System.out.println("\n1. Show Information about club");
@@ -394,7 +394,9 @@ public class Application {
                             }
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid input!\nTry again!");
-                            continue;
+                            in.next();
+                            System.out.println();
+                            start();
                         } catch (Exception e) {
                             e.printStackTrace();
                             continue;
