@@ -394,9 +394,7 @@ public class Application {
                             }
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid input!\nTry again!");
-                            in.next();
-                            System.out.println();
-                            start();
+                            continue;
                         } catch (Exception e) {
                             e.printStackTrace();
                             continue;
@@ -407,10 +405,11 @@ public class Application {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input!\nTry again!");
-                continue;
+                in.next();
+                System.out.println();
+                start();
             } catch (Exception e) {
                 e.printStackTrace();
-                continue;
             }
         }
     }
